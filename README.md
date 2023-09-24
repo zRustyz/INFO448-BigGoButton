@@ -53,4 +53,4 @@ This assignment is worth 5 points:
 
 Extra credit:
 
-* 1 pt: Create a video showing us how to 
+* 1 pt: Put a second text field onto the activity, and do a quote-with-attribution thing; that is, have the first text field contain a quote ("Whoa") and the second text field have the character who said it and what movie it's fromt ("--Neo, The Matrix"). The secod text field should be below the center, and the text in it italicized.
