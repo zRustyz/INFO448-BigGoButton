@@ -3,11 +3,14 @@ package edu.uw.ischool.rliu05.activityspy
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 
 
 class MainActivity : AppCompatActivity() {
 
     private val TAG: String = "activitySpy"
+    private lateinit var btnPushMe: Button
+    private var num = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i(TAG, "onCreate event fired")
@@ -15,6 +18,13 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "onCreate - savedInstanceState: $savedInstanceState")
         }
         setContentView(R.layout.activity_main)
+        btnPushMe = this.findViewById(R.id.btnPushMe)
+        btnPushMe.setOnClickListener {
+            num++
+            Log.i(TAG, "You have pushed me $num ${if (num < 2) "time" else "times"}")
+            btnPushMe.setText("You have pushed me $num ${if (num < 2) "time" else "times"}")
+        }
+
     }
     override fun onStart() {
         super.onStart()
